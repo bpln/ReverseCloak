@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Free xhtml template - minimalistic-design.com</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+
+	<div id="page">
+
+		<div id="header">
+		<h1><a href="#">ReverseClock</a></h1>
+			<h2>Reversible Location Perturbation Mechanisms for Protecting Location Privacy</h2>
+		</div>
+
+		<div id="wrapper">
+
+			<div id="content">
+
+				<h2>Overview</h2>
+				<div id="index_image">
+					<img src="figures/index_figure_200.jpg" alt="index_image" />
+				</div>
+				<b><big>ReverseClock</big></b> is a new class of reversible spatial and spatio-temporal cloaking mechanisms that effectively provides multi-level location privacy protection, allowing selective de-anonymization of the cloaking region when suitable access credentials are provided.
+				<br /><br />
+				Compared with most existing location cloaking schemes, ReverseClock offers these main advantages:
+				<ul>
+					<li><b>Bidirectional scheme</b>: When users with higher privilege have access to more fine
+					granular information, anonymized data can be de-anonymized. </li>
+					<li><b>Multilevel scheme</b>: It  supports multilevel location privacy requirements that allow different users to infer different levels of information from the same exposed location information based on their access credentials and the access privilege levels entitled to them.</li>
+
+				</ul> 
+				<br /><br />
+
+				<h2>Motivation</h2> 
+				<div id="location_privacy">
+					<img src="figures/location_privacy.jpg" alt="location_privacy" />
+				</div>
+				<p>
+					<b>Location privacy</b>: With the advent of big data, the risk of disclosing location information is further exacerbated as an adversary can correlate the exposed location with information from various other data sources to infer more accurate and fine-grained information about individuals.
+				</p>
+
+				<div id="location_anonymization">
+					<img src="figures/location_anonymization.jpg" alt="location_anonymization" />
+				</div>
+				<p>
+					<b>Location anonymization</b>: Location anonymization refers to the process of perturbing user location information such that the perturbed information becomes indistinguishable from that of a set of other users.
+				</p>
+
+				<div id="existing">
+					<img src="figures/existing.jpg" alt="existing" />
+				</div>
+				<p>
+					<br /><b>Motivations</b>: Most existing anonymization techniques are:
+					<ul>
+						<li><b>Unidirectional</b>: Anonymized data cannot be restored.</li>
+						<li><b>Single-level</b>: Both trusted and untrusted parties can get same anonymized data.</li>
+					</ul>
+				</p>
+				<br /><br />
+
+				<h2>Algorithms</h2> 
+				<p>
+					<b>Main design challenge</b>: Our algorithm picks road segments in an order to form cloaking region and therefore expecting to remove segments from cloaking region in its reverse order to do de-anonymization. However, de-anonymization is hard to be implemented over road network because of two types of collisions:
+				</p>
+				<div id="forward_collision">
+					<img src="figures/forward_collision.jpg" alt="forward_collision" />
+				</div>
+				<div id="backward_collision">
+					<img src="figures/backward_collision.jpg" alt="backward_collision" />
+				</div>
+				<p>
+					<b>Collision-free ReverseCloak mechanisms</b>: To handle collision challenge, we devise collision-free reversible cloaking mechanisms based on two approaches:
+					<ul>
+					<li><b>Reversible global expansion</b>: In the first approach, collisions are prevented by carefully assigning the transition values to the possible transitions among two sets of segments in a dynamic on-the-fly manner during anonymization.</li>
+					<li><b>Reversible pre-assignment-based local expansion</b>: In the second approach, the transitions among all the segments in the graph are assigned transition values.</li>
+				</ul>
+				</p>
+
+				<div id="algorithm">
+					<img src="figures/algorithm.jpg" alt="algorithm" />
+				</div>
+
+
+				<h2 id="publications">Publications</h2> 
+				<ul>
+					<li>Chao Li and Balaji Palanisamy, "ReverseCloak: Protecting Multi-level Location Privacy over Road Networks", Proc. of 24th ACM International Conference on Information and Knowledge Management (<b>CIKM 2015</b>), Melbourne, Australia. [<a href="http://www.sis.pitt.edu/bpalan/papers/reversecloak-cikm2015.pdf">PDF</a>]</li>
+					<li>Chao Li and Balaji Palanisamy, "De-anonymizable Location Cloaking for Privacy-controlled Mobile Systems", Proc. of 9th International Conference on Network and System Security (<b>NSS 2015</b>), New York, USA.[<a href="http://www.sis.pitt.edu/bpalan/papers/DRC-NSS2015.pdf">PDF</a>]</li>
+					<li>Chao Li, Balaji Palanisamy, Aravind A. Kalaivanan and Sriram Raghunathan, "ReverseCloak: A Reversible Multi-level Location Privacy Protection System", Proc. of 37th IEEE International Conference on Distributed Computing Systems (<b>ICDCS 2017</b>), Atlanta, USA.[<a href="http://www.sis.pitt.edu/bpalan/papers/ReversecloakDemo-ICDCS2017.pdf">PDF</a>][<a href="https://www.youtube.com/watch?v=bwADRMNT0Mg">Demo video</a>]</li>
+				</ul>
+				
+
+			</div>
+
+			<div id="sidebar"> 
+
+				<h2>Menu Navigation</h2>
+
+				<ul>
+					<li><a href="index.html">Overview</a></li> 
+					<li><a href="downloads.html">Downloads</a></li> 
+					<li><a href="people.html">People</a></li> 
+					<li><a href="index.html#publications">Publications</a></li>
+				</ul>
+
+				<h2>Useful Resources</h2>
+
+				<ul>
+					<li><a href="https://code.google.com/archive/p/gt-mobisim/">Simulation: GTMobisim</a></li> 
+					<li><a href="https://www.census.gov/geo/maps-data/data/tiger.html">Datasets: Road maps</a></li> 
+				</ul>
+
+			</div>
+
+			<div style="clear: both;"> </div>
+
+		</div>
+
+		<div id="footer">
+			<p>
+				Design by <a href="http://www.minimalistic-design.com">Minimalistic Design</a>
+			</p>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>
+
