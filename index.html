@@ -50,24 +50,30 @@ new threats - the intrusion of location privacy.
 					<img src="figures/location_anonymization.jpg" alt="location_anonymization" />
 				</div>
 				<p>
-					<b>Location anonymization</b>: Location anonymization refers to the process of perturbing user location information such that the perturbed information becomes indistinguishable from that of a set of other users.
+					<b>Location anonymization</b>: Location anonymization refers to the process of 
+					perturbing user location information such that the perturbed information becomes 
+					indistinguishable from that of a set of other users.
 				</p>
 
 				<div id="existing">
 					<img src="figures/existing.jpg" alt="existing" />
 				</div>
 				<p>
-					<br /><b>Motivations</b>: Most existing anonymization techniques are:
+					<br /><b>Motivations</b>: Conventional location perturbed techniques are generally designed to be:
 					<ul>
-						<li><b>Unidirectional</b>: Anonymized data cannot be restored.</li>
-						<li><b>Single-level</b>: Both trusted and untrusted parties can get same anonymized data.</li>
+						<li><b>Unidirectional</b>: Accurate data cannot be recovered once the data is perturbed.</li>
+						<li><b>Unilevel Protection</b>: Both trusted and semi-trusted parties get the same
+							anonymized data.</li>
 					</ul>
 				</p>
 				<br /><br />
 
 				<h2>Algorithms</h2> 
 				<p>
-					<b>Main design challenge</b>: Our algorithm picks road segments in an order to form cloaking region and therefore expecting to remove segments from cloaking region in its reverse order to do de-anonymization. However, de-anonymization is hard to be implemented over road network because of two types of collisions:
+					<b>Key design challenges</b>: ReverseCloak algorithms pick road segments in a pseudorandomly deterministic order
+					to form cloaking regions such that the segments can be removed from the cloaking region in the reverse 
+					order when de-anonymized. A key challenge during the de-anonymization process
+					occurs due to two forms of collisions:
 				</p>
 				<div id="forward_collision">
 					<img src="figures/forward_collision.jpg" alt="forward_collision" />
@@ -76,10 +82,10 @@ new threats - the intrusion of location privacy.
 					<img src="figures/backward_collision.jpg" alt="backward_collision" />
 				</div>
 				<p>
-					<b>Collision-free ReverseCloak mechanisms</b>: To handle collision challenge, we devise collision-free reversible cloaking mechanisms based on two approaches:
+					<b>Collision-free ReverseCloak mechanisms</b>: To handle collision challenge, ReverseCloak uses collision-free reversible cloaking mechanisms based on two approaches:
 					<ul>
 					<li><b>Reversible global expansion</b>: In the first approach, collisions are prevented by carefully assigning the transition values to the possible transitions among two sets of segments in a dynamic on-the-fly manner during anonymization.</li>
-					<li><b>Reversible pre-assignment-based local expansion</b>: In the second approach, the transitions among all the segments in the graph are assigned transition values.</li>
+					<li><b>Reversible pre-assignment-based local expansion</b>: In the second approach, the transitions among all the segments in the road network graph are assigned transition values.</li>
 				</ul>
 				</p>
 
@@ -124,7 +130,7 @@ new threats - the intrusion of location privacy.
 
 		<div id="footer">
 			<p>
-				Design by <a href="http://www.minimalistic-design.com">Minimalistic Design</a>
+				
 			</p>
 		</div>
 
